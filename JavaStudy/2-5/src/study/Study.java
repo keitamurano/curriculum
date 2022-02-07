@@ -1,9 +1,7 @@
 package study;
 
-//utilパッケージのArrayListクラスをimport
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
-//utilパッケージのListクラスをimport
 import java.util.List;
 import java.util.Map;
 

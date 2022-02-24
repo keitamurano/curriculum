@@ -1,0 +1,137 @@
+body {
+    width: 100%;
+}
+
+.wraper {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 400px;
+    height: 100px;
+    background-color: #141F40;
+}
+
+.header-inner {
+    float: right;
+    width: 160px;
+    height: 60px;
+    background-color: white;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: #a9004b;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.header-center {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: #a9004b;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.header-right {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-color: #a9004b;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.left {
+    float: left;
+    width: 150px;
+    height: 250px;
+    background-color: #80cfa8;
+}
+
+.content {
+    float: left;
+    width: 250px;
+    height: 250px;
+    background-color: #8c2727;
+}
+
+.con {
+    float: left;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin-top: 40px;
+    margin-right: 60px;
+    margin-left: 40px;
+}
+
+.content-top {
+    float: left;
+    width: 140px;
+    height: 40px;
+    background-color: #ff863f;
+    margin: 5px;
+}
+
+.con2 {
+    float: left;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-left: 40px;
+}
+
+.content-center {
+    float: left;
+    width: 140px;
+    height: 40px;
+    background-color: #ff863f;
+    margin: 5px;
+}
+
+.con3 {
+    float: left;
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    margin-top: 10px;
+    margin-right: 60px;
+    margin-left: 40px;
+    margin-bottom: 40px;
+}
+
+.content-bottom {
+    float: left;
+    width: 140px;
+    height: 40px;
+    background-color: #ff863f;
+    margin: 5px;
+}
+
+.footer {
+    width: 400px;
+    height: 100px;
+    background-color: #d98d30;
+}
+
+.clearfix::after {
+    content:"";
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+}

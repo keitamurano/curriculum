@@ -1,6 +1,8 @@
 @media screen and (max-width: 479px) {
     .header {
         width: 200px;
+        height: 200px;
+        padding-top: 50px;
     }
 
     .header-inner {

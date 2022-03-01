@@ -5,6 +5,9 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
   <!-- ここから追記 -->
   <welcome-file-list>
     <welcome-file>jspTest.jsp</welcome-file>
+    <welcome-file>headar.jsp</welcome-file>
+    <welcome-file>footer.jsp</welcome-file>
+    <welcome-file>style.css</welcome-file>
   </welcome-file-list>
   <!-- ここまで追記 -->
 </web-app>

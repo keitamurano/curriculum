@@ -1,0 +1,25 @@
+body {
+  padding-top: 0px;
+}
+
+.sidebar {
+  position: fixed;
+  display: block;
+  top: 70px;
+  bottom: 0;
+  background-color: #F4F5F7;
+  z-index: 2;
+}
+
+.main {
+  padding-top: 50px;
+  padding-left: 20px;
+  position: fixed;
+  display: block;
+  top: 0px;
+  bottom: 0;
+}
+
+.page-header {
+  margin-top: 0px;
+}

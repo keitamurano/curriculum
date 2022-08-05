@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8"></meta>
+</head>
+<body>
+    <!-- コンテンツ部分 -->
+    <div th:fragment="userList_contents">
+        <div class="page-header">
+            <h1>ユーザー一覧</h1>
+        </div>
+        <table class="table table-bordered table-hover table-striped">
+            <tr>
+                <th class="info col-sm-2">ユーザID</th>
+                <th class="info col-sm-2">ユーザ名</th>
+                <th class="info col-sm-2">チーム名</th>
+                <th class="info col-sm-2">性別</th>
+                <th class="info col-sm-2"></th>
+            </tr>
+            <tr th:each="userForm : ${userList}">
+                <td th:text="${userForm.userId}"></td>
+                <td th:text="${userForm.userName}"></td>
+                <td th:text="${userForm.teamName}"></td>
+                <td th:text="${userForm.gender} ? '男性チーム' : '女性チーム' : '混合チーム"></td>
+                <td>
+                    <!-- ユーザー詳細画面へのリンク(動的URL) -->
+                    <a class="btn btn-primary" th:href="@{'/userDetail/' + ${userForm.userId}}">
+                        詳細
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <!-- ユーザー一覧の件数 -->
+        <label th:text=" '合計：' + ${userListCount} + '件' "></label><br/>
+        <!-- 更新・削除処理の結果表示用 -->
+        <label class="text-info" th:text="${result}">結果表示</label><br/>
+    </div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 今回のサンプルで使用しているCSS（bootstrap）の読み込み -->
+		<link rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+			integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+			crossorigin="anonymous">
+		<title>output</title>
+	</head>
+	<body>
+		<div class="login align-items-center py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-9 col-lg-8 mx-auto">
+						<h3 class="login-heading my-4">大会詳細</h3>
+						<!-- modelにeventというキーでセットされてきた情報の表示 -->
+						<table class="table table-striped">
+							<tr>
+								<th>大会ID</th>
+								<th>大会名</th>
+								<th>大会開催日</th>
+								<th>大会開催場所</th>
+							</tr>
+							<tr>
+								<td th:text="${tournament.tournamentId}"></td>
+								<td th:text="${tournament.tournamentName}"></td>
+								<td th:text="${tournament.tournamentDate}"></td>
+								<td th:text="${tournament.tournamentVenue}"></td>
+							</tr>
+						</table>
+
+						<h3 class="login-heading my-4">この大会の参加チーム</h3>
+						<table class="table table-striped">
+							<tr>
+								<th>参加チームID</th>
+								<th>参加チーム名</th>
+								<th>代表者名</th>
+								<th>削除</th>
+							</tr>
+							<!-- Thymeleafの繰り返し処理 -->
+							<!-- modelにparticipantListというキーでセットされてきたリストを繰り返しで表示 -->
+							<!-- リスト（配列）のparticipantListから1ずつ要素を取得してparticipant（変数）に格納 -->
+							<tr th:each="participant : ${participantList}">
+								<td th:text="${participant.participantId}"></td>
+								<td th:text="${participant.participantTeamName}"></td>
+								<td th:text="${participant.participantName}"></td>
+								<td><a th:href="@{delete2(participantId=${participant.participantId})}">削除する</a></td>
+							</tr>
+						</table>
+						<br>
+						<h3 class="login-heading my-4">大会参加</h3>
+						<form action="add" method="post">
+							<div class="form-label-group">
+								<label for="participantName">参加チーム名</label>
+								<input type="text"
+									id="participantTeamName"
+									name="participantTeamName"
+									class="form-control">
+							</div>
+							<div class="form-label-group">
+								<label for="participantName">代表者名</label>
+								<input type="text"
+									id="participantName"
+									name="participantName"
+									class="form-control">
+							</div>
+							<!-- イベント参加処理に受け渡すイベントIDをhiddenにセット -->
+							<input type="hidden"
+								id="tournamentId"
+								neme="tournamentId"
+								th:field="${tournament.tournamentId}">
+							<br>
+							<button
+								class="btn btn-lg btn-primary btn-block btn-login font-weight-bold mb-2"
+								type="submit">この大会に参加する</button>
+							<button
+								class="btn btn-lg btn-scondary btn-block btn-login font-weight-bold mb-2"
+								type="button" onclick="history.back();">戻る</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

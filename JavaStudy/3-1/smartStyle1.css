@@ -1,29 +1,50 @@
-@media screen and (max-width: 767px) {
-    .header {
+/* 250 
+100
+250
+
+150
+150
+150
+解除 */
+
+@media screen and (max-width: 767px){
+    .header{
         width: 250px;
     }
-
-    .right {
+    .right{
+        float: left;
         width: 100px;
     }
-
-    .footer {
+    .footer{
         width: 250px;
     }
+
+
 }
 
-@media  screen and (max-width: 479px) {
-    .header {
+@media screen and (max-width: 479px) {
+    .header{
         width: 150px;
     }
 
-    .right {
+    .contents{
+        float: none;
+        height: auto;
+    }
+
+    .left{
+        float: none;
+        height: 250px;
+    }
+   
+    .right{
         float: none;
         width: 150px;
-    }
+        height: 250px;
 
-    .footer {
-        width: 150;
     }
-    
+    .footer{
+        width: 150px;
+    }
 }
+    

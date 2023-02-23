@@ -11,6 +11,7 @@
  */
 public class Task1_4 {
 
+    
     // 定数（アカウント情報）
     // ① 登録されている名前（USER_NAME）とパスワード（USER_PASSWORD）を定数で定義してください。
     private static final String USER_NAME = "alice";
